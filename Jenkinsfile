@@ -9,14 +9,12 @@ pipeline {
         sh 'node --version'
       }
     }
-  
-        stage('Build') {
-            steps {
-                sh 'npm install --save'
-            }
+
+  stage('Build') {
+    steps {
+        sh 'npm install --save'
         }
-        
-        
+     }   
     }
 }
 
