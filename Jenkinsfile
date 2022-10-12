@@ -4,17 +4,11 @@ pipeline {
     docker { image 'node:16-alpine' }
   }
   stages {
-    stage('Test') {
+    stage('Build') {
       steps {
-        sh 'node --version'
-      }
-    }
-
-  stage('Build') {
-    steps {
         sh 'npm install --save'
-        }
-     }   
+       }
+      }   
     }
 }
 
