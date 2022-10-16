@@ -1,6 +1,7 @@
 pipeline {
   agent {
-    docker { image 'node:16-alpine' }
+    docker { image 'node:16-alpine'
+             args '-p 3000:3000' }
   }
   stages {
     stage('Build') {
@@ -10,7 +11,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'node --version'
+        sh 'npm --version'
       }
     }
   }
